@@ -9,9 +9,9 @@ from numpy import histogram
 # G = getCommonFriendsNetwork(size=100, lib='graphtools')
 # G = getCommonSubscriptionsNetwork(size=100, lib='graphtools')
 # G = getCommonSubscribersNetwork(size=100, lib='graphtools')
-# G = getCommonFavoriteVideosNetwork(size=100, lib='graphtools')
+G = getCommonFavoriteVideosNetwork(size=100, lib='graphtools')
 
-x = G.degree_property_map(deg="total", weight="int")
+x = G.degree_property_map(deg="total", weight=G.edge_properties["weight"])
 y = [i for i in x]
 
 y, binEdges = histogram(y, bins=1000)
@@ -24,4 +24,4 @@ plt.ylabel('Number of users')
 # plt.savefig('Degree distribution with weights/commonfriends.png')
 # plt.savefig('Degree distribution with weights/commonsubscriptions.png')
 # plt.savefig('Degree distribution with weights/commonsubscribers.png')
-# plt.savefig('Degree distribution with weights/commonfavoritevideos.png')
+plt.savefig('Degree distribution with weights/commonfavoritevideos.png')
