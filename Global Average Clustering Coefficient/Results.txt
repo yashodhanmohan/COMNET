@@ -1,0 +1,5 @@
+Clustering coefficient for contacts network : 0.0795269567074
+Clustering coefficient for common friends network : 0.415993186971
+Clustering coefficient for common subscriptions network : 0.474233412191
+Clustering coefficient for common subscribers network : 0.420573831074
+Clustering coefficient for common favorite videos network : 0.399077150671
