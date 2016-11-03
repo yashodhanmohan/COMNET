@@ -13,12 +13,13 @@ def getGraph(filepath, lib):
         graph.add_nodes_from(arange(1, len(nodes)+1))
         return graph
     elif lib=='graphtools':
-        graph = gt.Graph()
+        graph = gt.Graph(directed=False)
         e_weight = graph.new_edge_property("int")
         reader_network = csv.reader(open(filepath, 'r'))
         for edge in reader_network:
              e = graph.add_edge(int(edge[0]), int(edge[1]))
              e_weight[e] = int(edge[2])
+        graph.edge_properties["weight"] = e_weight
         return graph
     elif lib=='igraph':
         graph = ig.Graph()
