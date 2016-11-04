@@ -1,0 +1,5 @@
+Mean of contact network degrees : 11.1877869271
+Mean of common friends network degrees : 293.128832503
+Mean of common subscriptions network degrees : 947.598640034
+Mean of common subscribers network degrees : 428.395982783
+Mean of common favorite videos network degrees : 577.148176292
